@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+	<color name="blanco">#FFFFFF</color>
+	<color name="negro">#000000</color>
+		
+	<color name="symptom_seleccion">#003366</color>
+		
+	<color name="color_reaccion">#003366</color>
+    
+    <color name="entrada_color">#003366</color>
+    <color name="nota_de_texto">#333333</color>
+    <color name="texto_estatico">#003366</color>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyTime</string>
+    <string name="bienvenida">Bienvenid@</string>
+    <string name="calendario">Calendario</string>
+    <string name="ejercicios">Ejercicios</string>
+    <string name="herramientas">Herramientas</string>
+    <string name="salir">Salir</string>
+    <string name="selector_izquierda">Selector izquierda</string>
+    <string name="selector_derecha">Selector derecha</string>
+    
+    <string name="cabecera">Cabecera días de la semana</string>
+    <string name="eventos">Ver Eventos</string>
+    <string name="nuevo">Crear nuevo evento</string>
+    <string name="seleccion">\n\nEscoja una opción:</string>
+    <string name="welcome_form">Crea un evento!</string>
+    
+    
+   
+    <string name="name_form">Nombre</string>
+    <string name="type_form">Tipo de evento</string>
+    <string name="course_form">Asignatura</string>
+    <string name="kind_form">Cómo es?</string>
+    <string name="ini_form">Hora de inicio</string>
+    <string name="fin_form">Fecha límite</string>
+</resources>

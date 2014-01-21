@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper2">
+    
+    <LinearLayout 
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="2"
+	    android:gravity="center"
+    >
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:shadowColor="#00ccff"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1.5"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        
+        <TextView  
+			android:id="@+id/bienvenida"
+	    	android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:gravity="center"
+	    	android:text="@string/bienvenida"
+	    	android:textStyle="bold"
+	    	android:textColor="#000000"
+	    />
+
+
+
+        <TextView
+            android:id="@+id/seleccion"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/seleccion"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+        
+        </LinearLayout>
+        
+    <TableLayout 
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+	>
+		
+		<TableRow
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingBottom = "10dp"
+		>
+			<LinearLayout 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:paddingRight="20dp"
+		   	>
+		   	
+			    <ImageButton
+        			android:id="@+id/calendario"
+        			android:onClick="showCal"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:contentDescription="@string/calendario"
+        			android:src="@drawable/calendar_xhdpi" />
+			    
+			    <TextView  
+				  	android:layout_width="fill_parent" 
+				  	android:layout_height="wrap_content" 
+				  	android:gravity="center"
+				  	android:textStyle="bold"
+				  	android:textColor="#000000"
+				  	android:text="@string/calendario"
+			  	/>
+		    </LinearLayout>
+		    
+
+			<LinearLayout
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:orientation="vertical"
+			    android:paddingLeft="20dp" >
+
+
+			    <ImageButton
+			        android:id="@+id/eventos"
+			        android:onClick="showEv"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/eventos"
+			        android:src="@drawable/eventos" />
+
+			    <TextView
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text="@string/eventos"
+			        android:textColor="#000000"
+			        android:textStyle="bold" />
+			</LinearLayout>
+		    
+ 		</TableRow>
+ 		
+ 		<TableRow
+			android:layout_weight="1"
+			android:gravity="center"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingTop = "20dp"
+			android:paddingBottom = "10dp">
+			
+ 		    <LinearLayout 
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:paddingRight="20dp">
+			    
+ 		    <ImageButton
+			        android:id="@+id/nuevo"
+			        android:onClick="newEv"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:contentDescription="@string/nuevo"
+			        android:src="@drawable/nuevo" />
+
+ 			<TextView
+ 			    android:layout_width="fill_parent"
+ 			    android:layout_height="wrap_content"
+ 			    android:layout_marginTop="20dp"
+ 			    android:gravity="center"
+ 			    android:text="@string/nuevo"
+ 			    android:textColor="#000000"
+ 			    android:textStyle="bold" />
+ 			
+ 			</LinearLayout>
+
+ 		</TableRow>
+	
+	</TableLayout>
+
+</LinearLayout>
+		    
+ 					  
+	
+
+
+		   	
+		

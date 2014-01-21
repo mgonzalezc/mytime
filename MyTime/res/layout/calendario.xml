@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/wallpaper2">
+
+	<Button
+		android:id="@+id/seleccionarDiaMesFecha"
+		android:textColor="#FFFFFF"
+		android:layout_gravity="center"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:background="@drawable/cabecera_calendario"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</Button>
+
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<ImageView
+			android:id="@+id/prevMes"
+			android:src="@drawable/calendario_selector_izquierda"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="irMesAnterior"
+			android:contentDescription="@string/selector_izquierda">
+			
+			
+		</ImageView>
+		<Button
+			android:id="@+id/mesActual"
+			android:layout_weight="0.6"
+			android:textColor="#FFFFFF"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:background="@drawable/barra"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</Button>
+		<ImageView
+			android:id="@+id/mesProx"
+			android:src="@drawable/calendario_selector_derecha"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="irMesSiguiente"
+			android:contentDescription="@string/selector_derecha">
+			
+		</ImageView>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:id="@+id/cabecera"
+			android:src="@drawable/dias"
+			android:layout_gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/cabecera">
+		</ImageView>
+	</LinearLayout>
+
+
+	<GridView
+		android:id="@+id/calendar"
+		android:numColumns="7"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+	</GridView>
+
+</LinearLayout>

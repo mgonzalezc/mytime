@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="770dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/wallpaper2"
+    android:paddingLeft="13dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/welcome_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:shadowColor="#00ccff"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1.5"
+        android:text="@string/welcome_form"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    
+    <!-- En este layout contenemos todo lo relacionado con el nombre y el tipo de evento -->
+    
+        <TextView
+            android:id="@+id/name_form"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/name_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/nombreText"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:ems="10" />
+		
+        <TextView
+            android:id="@+id/type_form"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/type_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    	<RadioGroup
+        	android:id="@+id/type_radioGroup"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" >
+
+        	<RadioButton
+            	android:id="@+id/examen_radio"
+            	android:onClick="examenForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Examen" />
+
+        	<RadioButton
+            	android:id="@+id/entrega_radio"
+            	android:onClick="entregaForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Entrega" />
+
+        	<RadioButton
+            	android:id="@+id/trabajo_radio"
+            	android:onClick="trabajoForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Trabajo" />
+    	</RadioGroup>
+
+    <!-- En este layout contenemos todo lo relacionado con la materia asociada al evento -->
+        
+        <TextView
+            android:id="@+id/course_form"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/course_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+        
+        <EditText
+            android:id="@+id/courseText"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+    
+    <!-- En este layout contenemos todos los tipos posibles de cada evento -->
+    <!-- Cada RadioGroup contiene opciones específicas de cada tipo de evento -->
+        
+        <TextView
+            android:id="@+id/kind_form"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/kind_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+        
+        <!-- Tipo de examen: Parcial o final -->
+        
+        	<RadioGroup
+        		android:id="@+id/kindEx_radioGroup"
+        		android:visibility="invisible"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" >
+
+        		<RadioButton
+            		android:id="@+id/parcial_radio"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:textColor="#000000"
+            		android:text="Parcial" />
+
+        		<RadioButton
+            		android:id="@+id/final_radio"
+            		android:onClick="entregaForm"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:textColor="#000000"
+            		android:text="Final" />
+        
+    		</RadioGroup>
+    	
+        <!-- Tipo de entrega: Corta, media o larga -->
+        
+        <RadioGroup
+        android:id="@+id/kindEnt_radioGroup"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        	<RadioButton
+            	android:id="@+id/corta_radio"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Corta" />
+
+        	<RadioButton
+            	android:id="@+id/media_radio"
+            	android:onClick="entregaForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Media" />
+        	
+        	<RadioButton
+            	android:id="@+id/larga_radio"
+            	android:onClick="entregaForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Larga" />
+        
+    	</RadioGroup>
+    	
+        <!-- Tipo de trabajo: Individual o en grupo -->
+        
+        <RadioGroup
+        android:id="@+id/kindTra_radioGroup"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        	<RadioButton
+            	android:id="@+id/individual_radio"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Individual" />
+
+        	<RadioButton
+            	android:id="@+id/grupo_radio"
+            	android:onClick="entregaForm"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#000000"
+            	android:text="Grupo" />
+        
+    	</RadioGroup>
+
+        <TextView
+            android:id="@+id/ini_form"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:gravity="left"
+            android:text="@string/ini_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TimePicker
+            android:id="@+id/iniTime"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:id="@+id/fin_form"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:gravity="left"
+            android:text="@string/fin_form"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/dateTime"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+</ScrollView>
